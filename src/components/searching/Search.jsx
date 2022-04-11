@@ -11,7 +11,7 @@ export default function SearchComponent() {
 
   const filteredItems = useMemo(() => {
     return items.filter((item) =>
-      item.color.toLowerCase().includes(filteredValue)
+      item.title.toLowerCase().includes(filteredValue)
     );
   }, [filteredValue]);
 
@@ -32,10 +32,9 @@ export default function SearchComponent() {
       />
       {isPending && <h1>Loading...</h1>}
       {filteredItems &&
-        filteredItems.map((el, i) => (
-          <div key={i}>
-            <p>{el.color}</p>
-            <p>{el.value}</p>
+        filteredItems.map((el) => (
+          <div key={el.id}>
+            <p>{el.title}</p>
           </div>
         ))}
     </div>

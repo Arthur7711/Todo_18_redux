@@ -7,7 +7,6 @@ import { useDispatch } from "react-redux";
 export default function AsyncComponent() {
   const dispatch = useDispatch();
   const customers = useSelector((data) => data.customers);
-  console.log(customers, "customers");
 
   return (
     <div>
