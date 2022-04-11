@@ -20,7 +20,15 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
+import { Provider } from "react-redux";
+import { createStore } from "redux";
+import { allReducers } from "./redux/reducers/rootReducer";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+const store = createStore(allReducers);
 
-root.render(<App />);
+root.render(
+  <Provider store={store}>
+    <App />
+  </Provider>
+);
