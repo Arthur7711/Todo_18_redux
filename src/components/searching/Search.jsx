@@ -28,6 +28,7 @@ export default function SearchComponent() {
         type="text"
         placeholder="Searching..."
         onChange={(e) => onChangeValue(e)}
+        className="outline-none border-2 border-black border-solid rounded-lg pl-2"
       />
       {isPending && <h1>Loading...</h1>}
       {filteredItems &&
