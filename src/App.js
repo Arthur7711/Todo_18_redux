@@ -3,7 +3,7 @@ import Todo from "./components/todo/Todo";
 
 function App() {
   return (
-    <div className="App">
+    <div className="flex justify-between">
       <SearchComponent />
       <Todo />
     </div>

@@ -1,10 +1,10 @@
-import React from 'react'
+import React from "react";
 
 export default function Todo() {
   return (
     <div>
-        <input />
-        <p></p>
+      <input type="text" placeholder="Todo" />
+      <p></p>
     </div>
-  )
+  );
 }
